@@ -29,7 +29,7 @@ function validateCard(validateArray) {
     for (let i = validateArray.length - 1; i >= 0; i--) {
       let digit = parseInt(validateArray[i]);
       
-      if (i % 2 === validateArray.length % 2) {
+      if (i % 2 == validateArray.length % 2) {
         digit *= 2;
       }
 
@@ -40,10 +40,10 @@ function validateCard(validateArray) {
       sum += digit;
     }
 
-    return sum % 10 ? false : true;
+    return sum % 10 == 0;
   };
 
-  let result = validateCard(valid1);
+  let result = validateCard(mystery5);
   console.log('Validation card result: ' + result);
 
 
