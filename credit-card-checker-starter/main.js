@@ -22,9 +22,29 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
-
 // Add your functions below:
+function validateCard(validateArray) {
+    let sum = 0;
 
+    for (let i = validateArray.length - 1; i >= 0; i--) {
+      let digit = parseInt(validateArray[i]);
+      
+      if (i % 2 === validateArray.length % 2) {
+        digit *= 2;
+      }
+
+      if (digit > 9 ) {
+        digit -= 9;
+      }
+
+      sum += digit;
+    }
+
+    return sum % 10 ? false : true;
+  };
+
+  let result = validateCard(valid1);
+  console.log('Validation card result: ' + result);
 
 
 
