@@ -57,8 +57,51 @@ function validateCard(validateArray) {
     return invalidCards;
   };
 
-  let invalidCards = findInvalidCards(batch);
- console.log(invalidCards.length);
+ let invalidCards = findInvalidCards(batch);
+ //console.log(invalidCards.length);
+
+ //console.log(findInvalidCards(batch));
+
+ function idInvalidCardCompanies(invalidCards) {
+  let companies = [];
+  let card = [];
+
+  for (let j = 0; j < invalidCards.length; j++) {
+    card = invalidCards[j];
+    
+    switch(card[0]) {
+      case 3:
+        if (companies.indexOf('Amex') === -1) {
+          companies.push('Amex');
+        }
+        break;
+      case 4:
+        if (companies.indexOf('Visa') === -1) {
+          companies.push('Visa');
+        }
+        break;
+      case 5:
+        if (companies.indexOf('Mastercard') === -1) {
+          companies.push('Mastercard');
+        }
+        break;
+      case 6:
+        if (companies.indexOf('Discover') === -1) {
+          companies.push('Discover');
+        }
+        break;
+      default:
+        if (companies.indexOf('Company not found') === -1) {
+          companies.push('Company not found');
+        }
+        break;
+    }
+  }
+  return companies;
+ };
+
+console.log();
+console.log(idInvalidCardCompanies(invalidCards));
 
 
 
