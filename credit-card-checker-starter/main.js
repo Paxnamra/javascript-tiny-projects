@@ -22,54 +22,52 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
-// Add your functions below:
+//start of the task:
+//function to calculate if given array of numbers is valid
 function validateCard(validateArray) {
-    let sum = 0;
+  let sum = 0;
 
-    for (let i = validateArray.length - 1; i >= 0; i--) {
-      let digit = parseInt(validateArray[i]);
-      
-      if (i % 2 == validateArray.length % 2) {
-        digit *= 2;
-      }
+  for (let i = validateArray.length - 1; i >= 0; i--) {
+    let digit = parseInt(validateArray[i]);
 
-      if (digit > 9 ) {
-        digit -= 9;
-      }
-
-      sum += digit;
+    if (i % 2 == validateArray.length % 2) {
+      digit *= 2;
     }
 
-    return sum % 10 == 0;
-  };
-
-  let result = validateCard(mystery5);
-  console.log('Validation card result: ' + result);
-
-  function findInvalidCards(cardBatch) {
-    let invalidCards = [];
-
-    for (let i = 0; i < cardBatch.length; i++) {
-      if (validateCard(cardBatch[i]) == false) {
-        invalidCards.push(cardBatch[i]);
-      }
+    if (digit > 9) {
+      digit -= 9;
     }
-    return invalidCards;
-  };
 
- let invalidCards = findInvalidCards(batch);
- //console.log(invalidCards.length);
+    sum += digit;
+  }
 
- //console.log(findInvalidCards(batch));
+  return sum % 10 == 0;
+};
 
- function idInvalidCardCompanies(invalidCards) {
+//function to filter out invalid cards from nested array of credit cards
+function findInvalidCards(cardBatch) {
+  let invalidCards = [];
+
+  for (let i = 0; i < cardBatch.length; i++) {
+    if (validateCard(cardBatch[i]) == false) {
+      invalidCards.push(cardBatch[i]);
+    }
+  }
+  return invalidCards;
+};
+
+//hold the result in a variable
+let invalidCards = findInvalidCards(batch);
+
+//filter out invalid cards providers
+function idInvalidCardCompanies(invalidCards) {
   let companies = [];
   let card = [];
 
   for (let j = 0; j < invalidCards.length; j++) {
     card = invalidCards[j];
-    
-    switch(card[0]) {
+
+    switch (card[0]) {
       case 3:
         if (companies.indexOf('Amex') === -1) {
           companies.push('Amex');
@@ -98,9 +96,9 @@ function validateCard(validateArray) {
     }
   }
   return companies;
- };
+};
 
-console.log();
+//print out invalid cards providers
 console.log(idInvalidCardCompanies(invalidCards));
 
 
