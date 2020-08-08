@@ -100,13 +100,3 @@ function idInvalidCardCompanies(invalidCards) {
 
 //print out invalid cards providers
 console.log(idInvalidCardCompanies(invalidCards));
-
-
-
-
-
-
-
-
-
-
