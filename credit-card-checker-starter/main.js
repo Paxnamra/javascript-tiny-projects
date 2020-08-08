@@ -46,6 +46,20 @@ function validateCard(validateArray) {
   let result = validateCard(mystery5);
   console.log('Validation card result: ' + result);
 
+  function findInvalidCards(cardBatch) {
+    let invalidCards = [];
+
+    for (let i = 0; i < cardBatch.length; i++) {
+      if (validateCard(cardBatch[i]) == false) {
+        invalidCards.push(cardBatch[i]);
+      }
+    }
+    return invalidCards;
+  };
+
+  let invalidCards = findInvalidCards(batch);
+ console.log(invalidCards.length);
+
 
 
 
