@@ -15,3 +15,7 @@ function compareGuesses(humanGuess, computerGuess, number) {
     }
 };
 
+function updateScore(winner) {
+    return (winner === 'human') ? humanScore++ : computerScore++;
+  };
+
