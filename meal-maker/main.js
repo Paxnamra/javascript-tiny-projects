@@ -29,12 +29,19 @@ let menu = {
       desserts: this.desserts
     };
   },
+
   addDishToCourse(courseName, dishName, dishPrice) {
     const dish = {
       dishName: dishName,
       dishPrice: dishPrice,
     };
     return this._courses[courseName].push(dish);
+  },
+
+  getRandomDishFromCourse(courseName) {
+    const dishes = this._courses[courseName];
+    const randomDish = Math.floor(Math.random() * dishes.length);
+    return dishes[randomDish];
   },
 }
 
@@ -43,4 +50,6 @@ console.log(menu.courses);
 console.log(menu._courses.courses);
 
 menu.addDishToCourse('appetizers', 'olives', 3.25);
+menu.addDishToCourse('appetizers', 'chips', 2.99);
 console.log(menu.appetizers);
+console.log(menu.getRandomDishFromCourse('appetizers'));
