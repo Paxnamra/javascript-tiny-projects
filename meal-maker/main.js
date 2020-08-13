@@ -62,3 +62,19 @@ console.log(menu.appetizers);
 console.log(menu.getRandomDishFromCourse('appetizers'));
 console.log();
 
+menu.addDishToCourse('appetizers', 'greek salad', 2.50);
+menu.addDishToCourse('appetizers', 'olives', 3.40);
+menu.addDishToCourse('appetizers', 'fruit smoothie', 4.12);
+
+menu.addDishToCourse('mains', 'beef burgers', 10.20);
+menu.addDishToCourse('mains', 'hunders stew', 8.60);
+menu.addDishToCourse('mains', 'deer meat', 15.00);
+
+menu.addDishToCourse('desserts', 'pudding', 2.00);
+menu.addDishToCourse('desserts', 'belgian fries', 3.55);
+menu.addDishToCourse('desserts', 'jelly', 2.80);
+
+console.log();
+
+const meal = menu.generateRandomMeal();
+console.log(meal);
