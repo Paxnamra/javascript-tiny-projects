@@ -33,8 +33,15 @@ let team = {
             opponentPoints: 39
         },
     ],
+    get players() {
+        return this._players;
+    },
+
+    get games() {
+        return this._games;
+    }
 };
 
-console.log(team._players);
+console.log(team.players);
 console.log();
-console.log(team._games);
+console.log(team.games);
