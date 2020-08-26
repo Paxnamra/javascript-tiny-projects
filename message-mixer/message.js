@@ -1,4 +1,4 @@
-const MessageMixer = require('./messageMixer.js');
+import MessageMixer from './messageMixer';
 
 function displayMessage() {
     console.log(MessageMixer.countCharacter("What is the color of the sky?", "t"));
