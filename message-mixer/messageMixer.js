@@ -1,6 +1,6 @@
 let MessageMixer = {};
 
-MessageMixer.countCharacter = function(inputString, inputCharacter) {
+function countCharacter(inputString, inputCharacter) {
     let count = 0;
     let string = inputString.toLowerCase();
     let character = inputCharacter.toLowerCase();
@@ -12,7 +12,7 @@ MessageMixer.countCharacter = function(inputString, inputCharacter) {
     return count;
 };
 
-MessageMixer.capitalizeFirstCharacterOfWords = function(string) {
+function capitalizeFirstCharacterOfWords(string) {
     let arr = string.split(" ");
     for (let i = 0; i < arr.length; i++) {
         let word = arr[i];
@@ -21,40 +21,41 @@ MessageMixer.capitalizeFirstCharacterOfWords = function(string) {
     return arr.join(" ");
 };
 
-MessageMixer.reverseWord = function(word) {
+function reverseWord(word) {
     return word.split("").reverse().join("");
 };
 
-MessageMixer.reverseAllWords = function(sentence) {
+function reverseAllWords(sentence) {
     let words = sentence.split(" ");
     for (let i = 0; i < words.length; i++) {
-        words[i] = MessageMixer.reverseWord(words[i]);
+        words[i] = reverseWord(words[i]);
     }
     return words.join(" ");
 };
 
-MessageMixer.replaceFirstOccurence = function(string, toBeReplaced, replaceWith) {
+function replaceFirstOccurence(string, toBeReplaced, replaceWith) {
     return string.replace(toBeReplaced, replaceWith);
 };
 
-MessageMixer.replaceAllOccurrences = function(string, toBeReplaced, replaceWith) {
+
+function replaceAllOccurrences(string, toBeReplaced, replaceWith) {
     return string.split(toBeReplaced).join(replaceWith);
 };
 
-MessageMixer.encode = function(string) {
+function encode(string) {
     let replacementObject = { "a": "@", "s": "$", "i": "!", "o":"0" };
     for (let key in replacementObject) {
-        string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]);
+        string = replaceAllOccurrences(string, key, replacementObject[key]);
     }
     return string;
 };
 
-MessageMixer.palindrome = function(word) {
-    return MessageMixer.reverseWord(word);
+function palindrome(word) {
+    return reverseWord(word);
 };
 
-MessageMixer.pigLatin = function(sentence, character) {
+function pigLatin(sentence, character) {
     return sentence.split(' ').join(character + ' ');
 };
 
-export default MessageMixer;
+export { countCharacter, capitalizeFirstCharacterOfWords, reverseWord, reverseAllWords, replaceFirstOccurence, replaceAllOccurrences, encode, palindrome, pigLatin };
