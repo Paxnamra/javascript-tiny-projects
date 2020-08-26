@@ -49,4 +49,8 @@ MessageMixer.encode = function(string) {
     return string;
 };
 
+MessageMixer.palindrome = function(word) {
+    return MessageMixer.reverseWord(word);
+};
+
 module.exports = MessageMixer;
