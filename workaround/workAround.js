@@ -1,4 +1,11 @@
-import Employee from './employee';
+import {
+    Employee,
+    getCadre as cadre,
+    calculateTax as tax,
+    getBenefits as benefits,
+    calculateBonus as bonus,
+    reimbursementEligibility as reimbursement
+} from './employee';
 
 function getEmployeeInformation(inputSalary) {
     Employee.salary = inputSalary;
