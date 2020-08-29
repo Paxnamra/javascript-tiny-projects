@@ -1,3 +1,5 @@
+import Employee from './employee';
+
 function getEmployeeInformation(inputSalary) {
     salary = inputSalary;
     console.log('Cadre: ' + getCadre());
