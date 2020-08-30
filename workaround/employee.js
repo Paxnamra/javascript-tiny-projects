@@ -22,7 +22,7 @@ function getCadre() {
 }
 
 function calculateTax() {
-    return payGrades[getCadre()].taxMultiplier * salary;
+    return payGrades[getCadre()].taxMultiplier * Employee.salary;
 }
 
 function getBenefits() {
@@ -30,7 +30,7 @@ function getBenefits() {
 }
 
 function calculateBonus() {
-    return .02 * salary;
+    return .02 * Employee.salary;
 }
 
 function reimbursementEligibility() {
