@@ -16,4 +16,12 @@ class School {
     get numberOfStudents() {
         return this._numberOfStudents;
     }
+
+    set numberOfStudents(newNumberOfStudents) {
+        if(newNumberOfStudents === number) {
+            this._numberOfStudents = newNumberOfStudents;
+        } else {
+            console.log('Invalid input: numberOfStudents must be set to a Number.');
+        }
+    }
 }
