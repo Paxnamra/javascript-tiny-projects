@@ -34,3 +34,7 @@ class School {
         return substituteTeachers[pickRandom];
     }
 }
+
+class PrimarySchool extends School {
+    
+}
