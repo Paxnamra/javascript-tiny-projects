@@ -45,3 +45,6 @@ class PrimarySchool extends School {
         return this._pickupPolicy;
     }
 }
+
+class HighSchool extends School {
+}
