@@ -40,4 +40,8 @@ class PrimarySchool extends School {
         super(name, 'primary', numberOfStudents);
         this._pickupPolicy = pickupPolicy;
     }
+
+    get pickupPolicy() {
+        return this._pickupPolicy;
+    }
 }
