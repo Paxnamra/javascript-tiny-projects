@@ -1,0 +1,3 @@
+- Create a middle school class
+- Add more properties to each class (averageTestScores, schoolOverview, etc.)
+- Create a class called SchoolCatalog that holds a collection of schools. Create an instance of SchoolCatalog for primary, middle, and high schools.
