@@ -4,3 +4,10 @@ let overusedWords = ['really', 'very', 'basically'];
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 let storyWords = story.split(' ');
+console.log(storyWords);
+
+let betterWords = storyWords.filter(word => {
+    return word !== unnecessaryWords[0] &&
+        word !== unnecessaryWords[1] &&
+        word !== unnecessaryWords[2];
+});
