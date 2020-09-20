@@ -11,3 +11,27 @@ let betterWords = storyWords.filter(word => {
         word !== unnecessaryWords[1] &&
         word !== unnecessaryWords[2];
 });
+
+function countOverused(input) {
+    let cReally = 0; let cVery = 0; let cBasically = 0;
+
+    for (let i = 0; i < input.length; i++) {
+
+        switch(input[i]) {
+            case 'really':
+                cReally++;
+                break;
+            case 'very':
+                cVery++;
+                break;
+            case 'basically':
+                cBasically++;
+                break;
+            default:
+                break;
+        }
+    }
+    return `Overused words appearance: "${overusedWords[0]}" times: ${cReally}, 
+                           "${overusedWords[1]}" times: ${cVery},
+                           "${overusedWords[2]}" times: ${cBasically}`;
+};
