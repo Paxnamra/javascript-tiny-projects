@@ -35,3 +35,14 @@ function countOverused(input) {
                            "${overusedWords[1]}" times: ${cVery},
                            "${overusedWords[2]}" times: ${cBasically}`;
 };
+
+function sentenceCount(input) {
+    let sentenceSymbol = 0
+
+    for (let i = 0; i < input.length; i++) {
+        if (input[i].indexOf('.') !== -1 || input[i].indexOf('!') !== -1) {
+            sentenceSymbol++;
+        }
+    }
+    return sentenceSymbol;
+};
