@@ -52,3 +52,6 @@ console.log('Words count: ' + storyWords.length);
 console.log('Sentence count: ' + sentenceCount(storyWords));
 console.log(countOverused(storyWords));
 console.log();
+
+let stringFormattedText = betterWords.join(' ');
+console.log(stringFormattedText);
