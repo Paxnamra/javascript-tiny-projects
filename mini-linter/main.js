@@ -46,3 +46,9 @@ function sentenceCount(input) {
     }
     return sentenceSymbol;
 };
+
+console.log();
+console.log('Words count: ' + storyWords.length);
+console.log('Sentence count: ' + sentenceCount(storyWords));
+console.log(countOverused(storyWords));
+console.log();
