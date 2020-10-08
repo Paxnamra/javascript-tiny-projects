@@ -6,7 +6,7 @@ const near = '?near=';
 
 // OpenWeather Info
 const openWeatherKey = '';
-const weatherUrl = '';
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 // Page Elements
 const $input = $('#city');
