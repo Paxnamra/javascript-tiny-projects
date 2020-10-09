@@ -18,8 +18,9 @@ const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 // Add AJAX functions here:
-const getVenues = = async() => {
-
+const getVenues = async() => {
+    const city = $input.val();
+    const urlToFetch = `${url}${near}${city}&limit=5&client_id=${clientId}&client_secret=${clientSecret}&v=20200917`;
 }
 
 const getForecast = () => {
