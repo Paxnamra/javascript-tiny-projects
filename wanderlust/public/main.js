@@ -26,7 +26,9 @@ const getVenues = async() => {
         const response = await fetch(urlToFetch);
         if (response.ok) {
             const jsonResponse = await response.json();
+            const venues = jsonResponse.response.groups[0].items.map(param => param.venue);
             console.log(venues);
+            return venues;
         }
         throw new Error('Request failed!');
     } catch (error) {
