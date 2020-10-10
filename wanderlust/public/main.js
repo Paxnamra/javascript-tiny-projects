@@ -24,7 +24,9 @@ const getVenues = async() => {
 
     try {
         const response = await fetch(urlToFetch);
-    
+        if (response.ok) {
+            console.log(venues);
+        }
         throw new Error('Request failed!');
     } catch (error) {
         console.log(error);
