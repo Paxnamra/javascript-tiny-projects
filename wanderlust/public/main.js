@@ -23,8 +23,8 @@ const getVenues = async() => {
     const urlToFetch = `${url}${near}${city}&limit=5&client_id=${clientId}&client_secret=${clientSecret}&v=20200917`;
 
     try {
-        
-        }
+        const response = await fetch(urlToFetch);
+    
         throw new Error('Request failed!');
     } catch (error) {
         console.log(error);
