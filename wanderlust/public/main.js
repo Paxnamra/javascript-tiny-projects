@@ -58,9 +58,9 @@ const renderVenues = (venues) => {
     $venueDivs.forEach(($venue, index) => {
         const venue = venues[index];
         const venueIcon = venue.categories[0].icon;
-        const venueImgSrc = `${venueIcon.prefix}bg_64${venue.suffix}`;
+        const venueImgSrc = `${venueIcon.prefix}bg_64${venueIcon.suffix}`;
 
-        let venueContent = '';
+        let venueContent = createVenueHTML(venue.name, venue.location, venueImgSrc);
         $venue.append(venueContent);
     });
     $destination.append(`<h2>${venues[0].location.city}</h2>`);
