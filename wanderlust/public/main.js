@@ -1,11 +1,11 @@
 // Foursquare API Info
-const clientId = '';
-const clientSecret = '';
+const clientId = ''; //after registration paste your key here
+const clientSecret = ''; //after registration paste your key here
 const url = 'https://api.foursquare.com/v2/venues/explore';
 const near = '?near=';
 
 // OpenWeather Info
-const openWeatherKey = '';
+const openWeatherKey = ''; //register and paste your key here
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 // Page Elements
@@ -25,6 +25,7 @@ const getVenues = async() => {
     try {
         const response = await fetch(urlToFetch);
         if (response.ok) {
+            //console.log(response);
             const jsonResponse = await response.json();
             const venues = jsonResponse.response.groups[0].items.map(param => param.venue);
             console.log(venues);
