@@ -56,7 +56,8 @@ const getForecast = async () => {
 // Render functions
 const renderVenues = (venues) => {
     $venueDivs.forEach(($venue, index) => {
-        // Add your code here:
+        const venue = venues[index];
+        const venueIcon = venue.categories[0].icon;
 
         let venueContent = '';
         $venue.append(venueContent);
