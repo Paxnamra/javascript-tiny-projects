@@ -1,0 +1,8 @@
+To get more practice with fetching json's informations try:
+
+1. Fetch more than 4 venues and randomize which ones are added
+to the page
+2. Include additional information about the weather
+3. Include additional iformation about each venue from the response
+4. Try fetching photos! It will require an additional request for venue details
+https://developer.foursquare.com/docs/api-reference/venues/details/
